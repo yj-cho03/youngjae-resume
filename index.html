@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>조영재 | Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#475569;
+  --line:#e2e8f0;
+  --accent:#1d4ed8;
+  --accent-soft:#dbeafe;
+  --chip:#eff6ff;
+  --shadow:0 18px 40px rgba(15,23,42,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Inter','Noto Sans KR',sans-serif;
+  background:linear-gradient(180deg,#f8fbff 0%, #f6f8fb 100%);
+  color:var(--text);
+}
+a{text-decoration:none;color:inherit}
+.container{max-width:980px;margin:0 auto;padding:32px 20px 60px}
+.topbar{
+  position:sticky;top:0;z-index:10;
+  backdrop-filter:blur(10px);
+  background:rgba(246,248,251,.82);
+  border-bottom:1px solid rgba(226,232,240,.7);
+}
+.topbar-inner{
+  max-width:980px;margin:0 auto;padding:16px 20px;
+  display:flex;justify-content:space-between;align-items:center;gap:20px;
+}
+.brand{font-size:20px;font-weight:800;letter-spacing:-.03em}
+.nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;color:#334155;font-weight:600}
+.hero{
+  display:grid;grid-template-columns:1.4fr .8fr;gap:24px;
+  margin-top:28px;
+}
+.panel{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:28px;
+  box-shadow:var(--shadow);
+}
+.hero-main{padding:42px}
+.eyebrow{
+  color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+  margin-bottom:14px;
+}
+h1{
+  margin:0;
+  font-size:clamp(40px,6vw,68px);
+  line-height:1;
+  letter-spacing:-.06em;
+}
+.subtitle{margin-top:14px;font-size:22px;font-weight:700;letter-spacing:-.03em}
+.desc{margin-top:18px;color:var(--muted);font-size:17px;line-height:1.9}
+.impact{
+  margin-top:18px;display:inline-block;
+  background:var(--accent-soft);color:#1e3a8a;
+  padding:10px 14px;border-radius:999px;font-weight:700;font-size:14px;
+}
+.btn-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:14px 18px;border-radius:14px;font-weight:700;font-size:15px;
+  border:1px solid var(--line);transition:.15s ease;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:var(--text);color:#fff;border-color:var(--text)}
+.btn.soft{background:#fff;color:#0f172a}
+.hero-side{padding:24px;display:flex;flex-direction:column;gap:16px}
+.photo{
+  min-height:220px;border-radius:22px;
+  background:radial-gradient(circle at top left,#dbeafe,transparent 35%),linear-gradient(135deg,#eff6ff,#e2e8f0);
+  border:1px solid #dbeafe;display:flex;align-items:center;justify-content:center;
+  color:#1e3a8a;font-weight:700;text-align:center;padding:20px;
+}
+.mini-card{padding:22px;border-radius:22px;background:#f8fafc;border:1px solid var(--line)}
+.mini-title{font-size:13px;color:var(--accent);font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+.mini-item+.mini-item{margin-top:14px}
+.mini-label{font-size:13px;color:var(--muted);font-weight:700;margin-bottom:4px}
+.mini-value{font-size:15px;font-weight:700;word-break:break-all}
+.section{margin-top:24px}
+.section-panel{padding:34px 34px 28px}
+.section-head{margin-bottom:18px}
+.section-kicker{font-size:12px;color:var(--accent);font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.section-title{margin:6px 0 0;font-size:34px;letter-spacing:-.05em}
+.rule{height:1px;background:var(--line);margin:18px 0 22px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.stat,.strength,.skill-box,.project-box,.edu-box{
+  border:1px solid var(--line);background:#fbfdff;border-radius:22px;padding:24px;
+}
+.stat-num{font-size:42px;font-weight:800;letter-spacing:-.06em}
+.stat-label{margin-top:10px;font-size:14px;font-weight:800;color:var(--accent)}
+.stat-text{margin-top:6px;color:var(--muted);font-size:15px}
+.box-title{margin:0 0 10px;font-size:28px;letter-spacing:-.05em;line-height:1.25}
+.box-text{margin:0;color:var(--muted);line-height:1.85}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.chip{background:var(--chip);color:#1e3a8a;border:1px solid #bfdbfe;padding:8px 12px;border-radius:999px;font-size:14px;font-weight:700}
+.skill-name{font-size:24px;font-weight:800;letter-spacing:-.04em;margin:0 0 8px}
+.project-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap}
+.project-name{margin:0;font-size:32px;letter-spacing:-.05em;line-height:1.2}
+.project-meta{color:var(--accent);font-weight:800;font-size:14px}
+.project-links{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;font-weight:800;color:var(--accent)}
+.edu-box{display:grid;grid-template-columns:250px 1fr;gap:20px}
+.edu-left{font-size:24px;font-weight:800;line-height:1.5;letter-spacing:-.04em}
+.edu-right{color:var(--muted);line-height:1.9}
+footer{padding:28px 0 10px;text-align:center;color:#64748b;font-size:14px}
+@media (max-width:860px){
+  .hero,.grid-2,.edu-box{grid-template-columns:1fr}
+  .hero-main,.section-panel{padding:28px}
+}
+@media (max-width:560px){
+  .topbar-inner{align-items:flex-start;flex-direction:column}
+  .nav{gap:10px 14px}
+  .subtitle{font-size:18px}
+  .desc{font-size:15px}
+  .section-title,.project-name,.box-title{font-size:26px}
+  .stat-num{font-size:34px}
+}
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Youngjae Resume</div>
+      <div class="nav">
+        <a href="#about">소개</a>
+        <a href="#summary">요약</a>
+        <a href="#strength">강점</a>
+        <a href="#skills">핵심 역량</a>
+        <a href="#project">프로젝트</a>
+        <a href="#education">학력</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="hero" id="about">
+      <div class="panel hero-main">
+        <div class="eyebrow">Resume / Portfolio</div>
+        <h1>조영재</h1>
+        <div class="subtitle">Backend · Data Flow · Computer Vision</div>
+        <p class="desc">
+          Raspberry Pi 기반 이미지 수집부터 MediaPipe를 활용한 신체 좌표 추출,
+          길이 및 비율 계산, JSON 구조화까지 전체 데이터 흐름을 설계하고 구현했습니다.
+          디바이스와 서버, 데이터를 실제로 연결해 동작하는 구조를 만드는 데 강점이 있습니다.
+        </p>
+        <div class="impact">디바이스–데이터–서버 흐름을 실제로 구현하는 개발자</div>
+        <div class="btn-row">
+          <a class="btn primary" href="https://github.com/yj-cho03" target="_blank" rel="noopener noreferrer">GitHub 프로필</a>
+          <a class="btn soft" href="https://github.com/yj-cho03/body-analysis" target="_blank" rel="noopener noreferrer">대표 프로젝트</a>
+        </div>
+      </div>
+      <div class="panel hero-side">
+        <div class="photo">프로필 이미지 자리<br>나중에 사진으로 교체 가능</div>
+        <div class="mini-card">
+          <div class="mini-title">Quick Note</div>
+          <div class="mini-item">
+            <div class="mini-label">GitHub ID</div>
+            <div class="mini-value">@yj-cho03</div>
+          </div>
+          <div class="mini-item">
+            <div class="mini-label">관심 분야</div>
+            <div class="mini-value">Body Analysis · Computer Vision · Data Processing</div>
+          </div>
+          <div class="mini-item">
+            <div class="mini-label">대표 저장소</div>
+            <div class="mini-value">github.com/yj-cho03/body-analysis</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="summary">
+      <div class="panel section-panel">
+        <div class="section-head">
+          <div class="section-kicker">Summary</div>
+          <h2 class="section-title">핵심 요약</h2>
+        </div>
+        <div class="rule"></div>
+        <div class="grid-2">
+          <div class="stat">
+            <div class="stat-num">33</div>
+            <div class="stat-label">관절 좌표</div>
+            <div class="stat-text">MediaPipe Pose 기반 landmark 데이터 추출</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">3</div>
+            <div class="stat-label">결과 JSON</div>
+            <div class="stat-text">front.json · side.json · body_result.json 생성</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">1</div>
+            <div class="stat-label">대표 프로젝트</div>
+            <div class="stat-text">AI 기반 체형 분석 의류 추천 시스템</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">End-to-End</div>
+            <div class="stat-label">구현 범위</div>
+            <div class="stat-text">촬영부터 데이터 생성과 서버 활용 흐름까지 직접 구현</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="strength">
+      <div class="panel section-panel">
+        <div class="section-head">
+          <div class="section-kicker">Strength</div>
+          <h2 class="section-title">강점</h2>
+        </div>
+        <div class="rule"></div>
+        <div class="grid-2">
+          <div class="strength">
+            <h3 class="box-title">실제로 동작하는 구조를 끝까지 만드는 실행력</h3>
+            <p class="box-text">Raspberry Pi 촬영, 좌표 추출, JSON 데이터 생성, 서버 활용까지 각각의 기능을 따로 보지 않고 하나의 동작 흐름으로 연결해 구현합니다.</p>
+          </div>
+          <div class="strength">
+            <h3 class="box-title">비율 기반 분석 구조에 대한 이해</h3>
+            <p class="box-text">촬영 거리나 자세 차이의 영향을 줄이기 위해 절대값보다 비율값 중심으로 데이터를 정리하고, 활용 가능한 형태로 결과를 구조화했습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="panel section-panel">
+        <div class="section-head">
+          <div class="section-kicker">Core Skills</div>
+          <h2 class="section-title">핵심 역량</h2>
+        </div>
+        <div class="rule"></div>
+        <div class="grid-2">
+          <div class="skill-box">
+            <h3 class="skill-name">Computer Vision / Data</h3>
+            <p class="box-text">이미지 처리, 신체 관절 좌표 추출, 데이터 구조화와 계산에 사용한 역량입니다.</p>
+            <div class="chips">
+              <span class="chip">Python</span>
+              <span class="chip">OpenCV</span>
+              <span class="chip">MediaPipe</span>
+              <span class="chip">JSON</span>
+            </div>
+          </div>
+          <div class="skill-box">
+            <h3 class="skill-name">Device / Workflow</h3>
+            <p class="box-text">Raspberry Pi 기반 촬영 환경 구성과 데이터 전송 흐름 설계에 사용한 역량입니다.</p>
+            <div class="chips">
+              <span class="chip">Raspberry Pi</span>
+              <span class="chip">Linux</span>
+              <span class="chip">FastAPI</span>
+              <span class="chip">REST API</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="project">
+      <div class="panel section-panel">
+        <div class="section-head">
+          <div class="section-kicker">Project</div>
+          <h2 class="section-title">대표 프로젝트</h2>
+        </div>
+        <div class="rule"></div>
+        <div class="project-box">
+          <div class="project-top">
+            <h3 class="project-name">AI 기반 체형 분석 의류 추천 시스템</h3>
+            <div class="project-meta">2026 · 팀 프로젝트</div>
+          </div>
+          <p class="box-text">
+            사용자의 전신 이미지를 촬영하고 MediaPipe Pose를 활용하여 신체 관절 좌표를 추출한 뒤,
+            길이 및 비율 데이터를 계산하여 체형 분석에 활용할 수 있는 JSON 데이터를 생성하는 시스템입니다.
+          </p>
+          <div class="chips">
+            <span class="chip">Raspberry Pi Camera</span>
+            <span class="chip">33 Landmark</span>
+            <span class="chip">front.json</span>
+            <span class="chip">side.json</span>
+            <span class="chip">body_result.json</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/yj-cho03/body-analysis" target="_blank" rel="noopener noreferrer">GitHub Repo ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="panel section-panel">
+        <div class="section-head">
+          <div class="section-kicker">Education</div>
+          <h2 class="section-title">학력</h2>
+        </div>
+        <div class="rule"></div>
+        <div class="edu-box">
+          <div class="edu-left">동양미래대학교<br>컴퓨터소프트웨어공학과<br>2022 ~</div>
+          <div class="edu-right">
+            Raspberry Pi, OpenCV, MediaPipe 등 하드웨어와 소프트웨어를 함께 다루는 프로젝트를 중심으로 경험을 쌓고 있으며,
+            데이터 처리와 시스템 구현을 연결하는 방향에 관심을 두고 공부하고 있습니다.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 조영재 Resume Portfolio</footer>
+</body>
+</html>

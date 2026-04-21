@@ -3,479 +3,426 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>조영재 | Resume</title>
+<title>조영재 | Project Resume</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#fcfaf5;
-  --paper:#fffdf8;
-  --text:#1d2433;
-  --muted:#667085;
-  --line:#ddd6c9;
-  --accent:#9a5b16;
-  --accent-soft:#f6ead6;
+  --bg:#f8f6f1;
+  --paper:#fffdfa;
+  --ink:#1f2937;
+  --muted:#6b7280;
+  --line:#e6dfd2;
+  --accent:#8b5e34;
+  --accent-soft:#f3e7d7;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   margin:0;
   font-family:'Inter','Noto Sans KR',sans-serif;
-  background:linear-gradient(180deg,#fffdf8 0%, #faf6ee 100%);
-  color:var(--text);
+  color:var(--ink);
+  background:
+    linear-gradient(180deg,#fffdfa 0%, #f8f6f1 100%);
 }
 a{text-decoration:none;color:inherit}
-.wrapper{max-width:1180px;margin:0 auto;padding:0 20px 60px}
+.wrapper{max-width:1160px;margin:0 auto;padding:0 20px 60px}
 .topbar{
   position:sticky;top:0;z-index:10;
-  background:rgba(255,253,248,.92);
+  background:rgba(255,253,250,.9);
   backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line);
 }
 .topbar-inner{
-  max-width:1180px;margin:0 auto;padding:18px 20px;
-  display:flex;justify-content:space-between;align-items:center;gap:20px;
+  max-width:1160px;margin:0 auto;padding:16px 20px;
+  display:flex;justify-content:space-between;align-items:center;gap:18px;
 }
-.logo{font-size:18px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-.menu{display:flex;flex-wrap:wrap;gap:18px;color:var(--muted);font-size:14px;font-weight:700}
-.layout{
+.brand{font-size:18px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.menu{display:flex;flex-wrap:wrap;gap:18px;font-size:14px;color:var(--muted);font-weight:700}
+.hero{
   display:grid;
-  grid-template-columns:320px minmax(0,1fr);
-  gap:46px;
-  padding-top:34px;
+  grid-template-columns:1.1fr .9fr;
+  gap:28px;
+  padding:42px 0 28px;
 }
-.sidebar{
-  position:sticky;
-  top:88px;
-  height:max-content;
-}
-.side-block{
-  padding-bottom:26px;
-  border-bottom:1px solid var(--line);
-  margin-bottom:26px;
-}
-.side-kicker{
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:.18em;
-  color:var(--accent);
-  font-weight:800;
-  margin-bottom:10px;
-}
-.name{font-size:56px;line-height:.92;letter-spacing:-.08em;font-weight:800;margin:0 0 12px}
-.role{font-size:18px;line-height:1.6;color:var(--muted);font-weight:600}
-.mark{
+.hero-copy{padding-right:10px}
+.eyebrow{
   display:inline-block;
-  margin-top:16px;
+  font-size:12px;
   padding:8px 12px;
+  border-radius:999px;
   background:var(--accent-soft);
   color:var(--accent);
-  border-radius:999px;
-  font-size:13px;
-  font-weight:700;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
 }
-.side-list{display:flex;flex-direction:column;gap:14px}
-.side-item-label{font-size:12px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.14em;margin-bottom:4px}
-.side-item-value{font-size:15px;font-weight:700;line-height:1.6;word-break:break-word}
-.btn-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+h1{
+  margin:18px 0 12px;
+  font-size:clamp(42px,7vw,88px);
+  line-height:.92;
+  letter-spacing:-.09em;
+}
+.lead{
+  font-size:30px;
+  line-height:1.28;
+  letter-spacing:-.05em;
+  font-weight:700;
+  max-width:720px;
+}
+.lead-desc{
+  margin-top:20px;
+  color:var(--muted);
+  font-size:17px;
+  line-height:1.95;
+  max-width:720px;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 .btn{
   display:inline-flex;align-items:center;justify-content:center;
-  padding:12px 14px;border:1px solid var(--line);border-radius:999px;
-  font-size:14px;font-weight:700;background:#fff;
+  padding:13px 16px;border-radius:999px;border:1px solid var(--line);
+  background:#fff;font-size:14px;font-weight:700;
 }
-.btn.primary{background:var(--text);border-color:var(--text);color:#fff}
-.main{min-width:0}
-.hero{
-  padding:10px 0 24px;
-  border-bottom:1px solid var(--line);
-}
-.hero-title{
-  margin:0;
-  font-size:clamp(34px,5vw,62px);
-  line-height:1.05;
-  letter-spacing:-.07em;
-  max-width:860px;
-}
-.hero-desc{
-  margin:22px 0 0;
-  color:var(--muted);
-  font-size:18px;
-  line-height:2;
-  max-width:840px;
-}
-.section{
-  padding:34px 0;
-  border-bottom:1px solid var(--line);
-}
-.section-head{
+.btn.primary{background:var(--ink);border-color:var(--ink);color:#fff}
+.hero-panel{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:24px;
+  box-shadow:0 12px 32px rgba(48,38,22,.06);
   display:grid;
-  grid-template-columns:180px 1fr;
-  gap:26px;
-  align-items:start;
+  gap:18px;
 }
-.section-label{
+.hero-visual{
+  min-height:220px;
+  border-radius:22px;
+  background:linear-gradient(135deg,#fbf4ea,#efe2d1);
+  border:1px dashed #d3b999;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;color:var(--accent);font-weight:700;padding:20px;
+}
+.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mini-box{
+  padding:16px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+}
+.mini-label{font-size:12px;color:var(--muted);font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.mini-value{font-size:15px;font-weight:700;line-height:1.6;word-break:break-word}
+.section{
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:26px;
+  padding:34px 0;
+  border-top:1px solid var(--line);
+}
+.section-key{
   font-size:12px;
   color:var(--accent);
-  text-transform:uppercase;
-  letter-spacing:.18em;
   font-weight:800;
+  letter-spacing:.18em;
+  text-transform:uppercase;
   padding-top:8px;
 }
-.section-title{
-  margin:0;
-  font-size:40px;
+.section-content h2{
+  margin:0 0 18px;
+  font-size:42px;
+  line-height:1.05;
   letter-spacing:-.06em;
-  line-height:1.1;
 }
-.section-body{
-  margin-top:18px;
-  padding-left:206px;
-}
-.metrics{
+.overview-grid{
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:18px 28px;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
 }
-.metric{
-  display:grid;
-  grid-template-columns:110px 1fr;
-  gap:18px;
+.overview-item{
   padding:18px 0;
   border-top:1px solid var(--line);
 }
-.metric-num{
-  font-size:40px;
-  font-weight:800;
-  letter-spacing:-.06em;
-  line-height:1;
-}
-.metric-copy strong{
+.overview-item strong{
   display:block;
   font-size:15px;
   color:var(--accent);
   margin-bottom:8px;
 }
-.metric-copy span{
-  color:var(--muted);
-  line-height:1.8;
-}
-.statement-list{display:flex;flex-direction:column;gap:28px}
-.statement{
-  padding-top:18px;
-  border-top:1px solid var(--line);
-}
-.statement h3{
-  margin:0 0 10px;
-  font-size:30px;
-  letter-spacing:-.05em;
-  line-height:1.25;
-}
-.statement p{
-  margin:0;
-  color:var(--muted);
-  line-height:1.9;
-  font-size:17px;
-}
-.skill-row{
-  display:grid;
-  grid-template-columns:220px 1fr;
-  gap:18px;
-  padding:18px 0;
-  border-top:1px solid var(--line);
-}
-.skill-name{
-  font-size:24px;
-  font-weight:800;
-  letter-spacing:-.04em;
-}
-.skill-detail p{
-  margin:0 0 10px;
+.overview-item span{
   color:var(--muted);
   line-height:1.85;
 }
-.tags{display:flex;flex-wrap:wrap;gap:10px}
-.tag{
-  display:inline-flex;
-  align-items:center;
-  padding:7px 11px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  background:#fff;
-  font-size:14px;
-  font-weight:700;
-  color:var(--accent);
-}
-.project{
+.story{
   display:grid;
-  grid-template-columns:180px 1fr;
-  gap:26px;
-  padding-top:18px;
+  gap:18px;
+}
+.story-block{
+  padding:20px 0;
   border-top:1px solid var(--line);
 }
-.project-meta{
-  font-size:14px;
-  color:var(--accent);
-  font-weight:800;
-  line-height:1.8;
+.story-block h3{
+  margin:0 0 10px;
+  font-size:28px;
+  line-height:1.25;
+  letter-spacing:-.05em;
 }
-.project-main h3{
-  margin:0 0 14px;
-  font-size:44px;
-  letter-spacing:-.07em;
-  line-height:1.08;
-}
-.project-main p{
+.story-block p{
   margin:0;
   color:var(--muted);
-  line-height:1.95;
   font-size:17px;
+  line-height:1.95;
 }
-.project-links{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;font-weight:800;color:var(--accent)}
-.edu{
+.process-list{display:grid;gap:14px}
+.process-row{
   display:grid;
-  grid-template-columns:260px 1fr;
-  gap:24px;
+  grid-template-columns:130px 1fr;
+  gap:18px;
+  padding:16px 0;
+  border-top:1px solid var(--line);
+}
+.process-step{
+  font-size:15px;
+  font-weight:800;
+  color:var(--accent);
+}
+.process-text{color:var(--muted);line-height:1.85}
+.tech-list{display:grid;gap:16px}
+.tech-row{
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:18px;
+  padding:16px 0;
+  border-top:1px solid var(--line);
+}
+.tech-name{font-size:24px;font-weight:800;letter-spacing:-.04em}
+.tech-detail{color:var(--muted);line-height:1.85}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.tag{
+  display:inline-flex;align-items:center;
+  padding:8px 12px;border-radius:999px;
+  border:1px solid var(--line);background:#fff;
+  color:var(--accent);font-size:14px;font-weight:700;
+}
+.timeline{display:grid;gap:20px}
+.timeline-item{
+  display:grid;
+  grid-template-columns:140px 1fr;
+  gap:18px;
   padding-top:18px;
   border-top:1px solid var(--line);
 }
-.edu-left{
-  font-size:32px;
-  font-weight:800;
-  letter-spacing:-.05em;
-  line-height:1.35;
-}
-.edu-right{
-  color:var(--muted);
-  line-height:1.95;
-  font-size:17px;
-}
-footer{
-  padding:24px 0 0;
-  color:#8a8a8a;
-  font-size:13px;
-}
+.timeline-date{font-size:14px;font-weight:800;color:var(--accent);line-height:1.8}
+.timeline-main h3{margin:0 0 10px;font-size:28px;letter-spacing:-.05em;line-height:1.22}
+.timeline-main p{margin:0;color:var(--muted);line-height:1.9}
+.links{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;font-weight:800;color:var(--accent)}
+footer{padding:26px 0 0;color:#8b8b8b;font-size:13px}
 @media (max-width:980px){
-  .layout,.section-head,.project,.edu,.skill-row,.metric{
-    grid-template-columns:1fr;
-  }
-  .sidebar{position:static}
-  .section-body{padding-left:0}
-  .hero-title{font-size:42px}
-  .project-main h3,.section-title,.edu-left,.statement h3{font-size:30px}
+  .hero,.section,.timeline-item,.tech-row,.process-row{grid-template-columns:1fr}
+  .overview-grid,.mini-grid{grid-template-columns:1fr}
+  .section-content h2{font-size:34px}
+  .lead{font-size:24px}
 }
 @media (max-width:640px){
   .topbar-inner{flex-direction:column;align-items:flex-start}
-  .name{font-size:46px}
-  .hero-desc,.statement p,.edu-right,.project-main p{font-size:15px}
-  .metrics{grid-template-columns:1fr}
+  h1{font-size:52px}
+  .lead-desc,.story-block p,.process-text,.tech-detail,.timeline-main p{font-size:15px}
 }
 </style>
 </head>
 <body>
   <div class="topbar">
     <div class="topbar-inner">
-      <div class="logo">Youngjae Resume</div>
+      <div class="brand">Youngjae Project Resume</div>
       <div class="menu">
-        <a href="#about">소개</a>
-        <a href="#summary">요약</a>
-        <a href="#strength">강점</a>
-        <a href="#skills">핵심 역량</a>
-        <a href="#project">프로젝트</a>
-        <a href="#education">학력</a>
+        <a href="#intro">소개</a>
+        <a href="#overview">한눈에 보기</a>
+        <a href="#story">내가 맡은 일</a>
+        <a href="#process">처리 흐름</a>
+        <a href="#tech">개발 환경</a>
+        <a href="#timeline">진행 기록</a>
       </div>
     </div>
   </div>
 
   <main class="wrapper">
-    <div class="layout">
-      <aside class="sidebar">
-        <div class="side-block">
-          <div class="side-kicker">Resume / Portfolio</div>
-          <h1 class="name">조영재</h1>
-          <div class="role">Backend · Data Flow · Computer Vision</div>
-          <div class="mark">디바이스–데이터–서버 흐름을 실제로 구현하는 개발자</div>
-          <div class="btn-row">
-            <a class="btn primary" href="https://github.com/yj-cho03" target="_blank" rel="noopener noreferrer">GitHub 프로필</a>
-            <a class="btn" href="https://github.com/yj-cho03/body-analysis" target="_blank" rel="noopener noreferrer">대표 프로젝트</a>
-          </div>
+    <section class="hero" id="intro">
+      <div class="hero-copy">
+        <div class="eyebrow">Project Resume</div>
+        <h1>조영재</h1>
+        <div class="lead">프로젝트 안에서 맡은 역할과 실제 구현한 흐름을 중심으로 정리한 이력서</div>
+        <p class="lead-desc">
+          Raspberry Pi 기반 이미지 수집부터 MediaPipe를 활용한 신체 좌표 추출, 길이 및 비율 계산,
+          JSON 구조화와 서버 활용까지 직접 연결하는 역할을 맡았습니다.
+          단순 기능 구현보다 촬영 이후 데이터가 실제로 사용 가능한 결과 형태로 이어지도록 만드는 데 집중했습니다.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="https://github.com/yj-cho03/body-analysis" target="_blank" rel="noopener noreferrer">프로젝트 저장소 보기</a>
+          <a class="btn" href="https://github.com/yj-cho03" target="_blank" rel="noopener noreferrer">GitHub 프로필</a>
         </div>
-
-        <div class="side-block">
-          <div class="side-list">
-            <div>
-              <div class="side-item-label">GitHub ID</div>
-              <div class="side-item-value">@yj-cho03</div>
-            </div>
-            <div>
-              <div class="side-item-label">개발 환경 핵심</div>
-              <div class="side-item-value">Python · Fast API · Flutter Web · MySQL</div>
-            </div>
-            <div>
-              <div class="side-item-label">대표 저장소</div>
-              <div class="side-item-value">github.com/yj-cho03/body-analysis</div>
-            </div>
-          </div>
-        </div>
-      </aside>
-
-      <div class="main">
-        <section class="hero" id="about">
-          <h2 class="hero-title">Raspberry Pi 기반 이미지 수집부터 MediaPipe를 활용한 신체 좌표 추출, 길이 및 비율 계산, JSON 구조화까지 전체 데이터 흐름을 설계하고 구현했습니다.</h2>
-          <p class="hero-desc">
-            디바이스와 서버, 데이터를 실제로 연결해 동작하는 구조를 만드는 데 강점이 있습니다.
-            촬영 결과를 단순 저장하는 것이 아니라, 활용 가능한 체형 분석 데이터로 가공하고 연결하는 과정에 집중해 왔습니다.
-          </p>
-        </section>
-
-        <section class="section" id="summary">
-          <div class="section-head">
-            <div class="section-label">Summary</div>
-            <h3 class="section-title">핵심 요약</h3>
-          </div>
-          <div class="section-body">
-            <div class="metrics">
-              <div class="metric">
-                <div class="metric-num">33</div>
-                <div class="metric-copy">
-                  <strong>관절 좌표</strong>
-                  <span>MediaPipe Pose 기반 landmark 데이터 추출</span>
-                </div>
-              </div>
-              <div class="metric">
-                <div class="metric-num">3</div>
-                <div class="metric-copy">
-                  <strong>결과 JSON</strong>
-                  <span>front.json · side.json · body_result.json 생성</span>
-                </div>
-              </div>
-              <div class="metric">
-                <div class="metric-num">1</div>
-                <div class="metric-copy">
-                  <strong>대표 프로젝트</strong>
-                  <span>AI 기반 체형 분석 의류 추천 시스템</span>
-                </div>
-              </div>
-              <div class="metric">
-                <div class="metric-num">E2E</div>
-                <div class="metric-copy">
-                  <strong>구현 범위</strong>
-                  <span>촬영부터 데이터 생성과 서버 활용 흐름까지 직접 구현</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section" id="strength">
-          <div class="section-head">
-            <div class="section-label">Strength</div>
-            <h3 class="section-title">강점</h3>
-          </div>
-          <div class="section-body">
-            <div class="statement-list">
-              <div class="statement">
-                <h3>실제로 동작하는 구조를 끝까지 만드는 실행력</h3>
-                <p>Raspberry Pi 촬영, 좌표 추출, JSON 데이터 생성, 서버 활용까지 각각의 기능을 따로 보지 않고 하나의 동작 흐름으로 연결해 구현합니다.</p>
-              </div>
-              <div class="statement">
-                <h3>비율 기반 분석 구조에 대한 이해</h3>
-                <p>촬영 거리나 자세 차이의 영향을 줄이기 위해 절대값보다 비율값 중심으로 데이터를 정리하고, 활용 가능한 형태로 결과를 구조화했습니다.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section" id="skills">
-          <div class="section-head">
-            <div class="section-label">Core Skills</div>
-            <h3 class="section-title">핵심 역량</h3>
-          </div>
-          <div class="section-body">
-            <div class="skill-row">
-              <div class="skill-name">서버 / 데이터 처리</div>
-              <div class="skill-detail">
-                <p>체형 분석 결과를 처리하고 API 형태로 연결하기 위한 개발 환경입니다.</p>
-                <div class="tags">
-                  <span class="tag">Python</span>
-                  <span class="tag">Fast API</span>
-                  <span class="tag">REST API (JSON)</span>
-                  <span class="tag">MySQL</span>
-                  <span class="tag">MySQL Workbench</span>
-                </div>
-              </div>
-            </div>
-            <div class="skill-row">
-              <div class="skill-name">클라이언트 / 디바이스</div>
-              <div class="skill-detail">
-                <p>촬영 장치, 이미지 처리, 프론트엔드 연결에 사용한 개발 환경입니다.</p>
-                <div class="tags">
-                  <span class="tag">Flutter Web</span>
-                  <span class="tag">Raspberry Pi Camera Module</span>
-                  <span class="tag">Raspberry Pi</span>
-                  <span class="tag">OpenCV</span>
-                  <span class="tag">MediaPipe Pose</span>
-                  <span class="tag">VSCode</span>
-                  <span class="tag">Git</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section" id="project">
-          <div class="section-head">
-            <div class="section-label">Project</div>
-            <h3 class="section-title">대표 프로젝트</h3>
-          </div>
-          <div class="section-body">
-            <div class="project">
-              <div class="project-meta">
-                2026<br>팀 프로젝트
-              </div>
-              <div class="project-main">
-                <h3>AI 기반 체형 분석 의류 추천 시스템</h3>
-                <p>
-                  사용자의 전신 이미지를 촬영하고 MediaPipe Pose를 활용하여 신체 관절 좌표를 추출한 뒤,
-                  길이 및 비율 데이터를 계산하여 체형 분석에 활용할 수 있는 JSON 데이터를 생성하는 시스템입니다.
-                  서버는 Python 기반 Fast API 환경으로 구성하였고, 클라이언트는 Flutter Web과 REST API(JSON) 방식으로 연결하도록 설계했습니다.
-                </p>
-                <div class="tags">
-                  <span class="tag">Raspberry Pi Camera Module</span>
-                  <span class="tag">33 Landmark</span>
-                  <span class="tag">front.json</span>
-                  <span class="tag">side.json</span>
-                  <span class="tag">body_result.json</span>
-                  <span class="tag">Fast API</span>
-                  <span class="tag">Flutter Web</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/yj-cho03/body-analysis" target="_blank" rel="noopener noreferrer">GitHub Repo ↗</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section" id="education">
-          <div class="section-head">
-            <div class="section-label">Education</div>
-            <h3 class="section-title">학력</h3>
-          </div>
-          <div class="section-body">
-            <div class="edu">
-              <div class="edu-left">동양미래대학교<br>컴퓨터소프트웨어공학과<br>2022 ~</div>
-              <div class="edu-right">
-                Raspberry Pi, OpenCV, MediaPipe 등 하드웨어와 소프트웨어를 함께 다루는 프로젝트를 중심으로 경험을 쌓고 있으며,
-                데이터 처리와 시스템 구현을 연결하는 방향에 관심을 두고 공부하고 있습니다.
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <footer>© 2026 조영재 Resume Portfolio</footer>
       </div>
-    </div>
+      <div class="hero-panel">
+        <div class="hero-visual">프로젝트 흐름 이미지 또는 사진 자리<br>나중에 교체 가능</div>
+        <div class="mini-grid">
+          <div class="mini-box">
+            <div class="mini-label">프로젝트명</div>
+            <div class="mini-value">AI 기반 체형 분석 의류 추천 시스템</div>
+          </div>
+          <div class="mini-box">
+            <div class="mini-label">내 역할</div>
+            <div class="mini-value">촬영 · 좌표 추출 · 길이/비율 계산 · JSON 생성</div>
+          </div>
+          <div class="mini-box">
+            <div class="mini-label">핵심 환경</div>
+            <div class="mini-value">Python · Fast API · Flutter Web · MySQL</div>
+          </div>
+          <div class="mini-box">
+            <div class="mini-label">대표 결과물</div>
+            <div class="mini-value">front.json · side.json · body_result.json</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="section-key">Overview</div>
+      <div class="section-content">
+        <h2>한눈에 보기</h2>
+        <div class="overview-grid">
+          <div class="overview-item">
+            <strong>33개 관절 좌표</strong>
+            <span>MediaPipe Pose 기반 landmark 데이터를 추출해 정면과 측면 분석에 활용했습니다.</span>
+          </div>
+          <div class="overview-item">
+            <strong>3개의 핵심 JSON</strong>
+            <span>front.json, side.json, body_result.json 구조로 데이터를 정리했습니다.</span>
+          </div>
+          <div class="overview-item">
+            <strong>End-to-End 구현</strong>
+            <span>촬영 이후 분석 결과가 서버에서 활용 가능한 데이터로 이어지도록 설계했습니다.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="story">
+      <div class="section-key">My Work</div>
+      <div class="section-content">
+        <h2>내가 맡은 일</h2>
+        <div class="story">
+          <div class="story-block">
+            <h3>촬영 이후 데이터를 바로 분석 가능한 형태로 연결</h3>
+            <p>라즈베리파이 카메라로 이미지를 촬영하는 단계에서 끝내지 않고, 이후 좌표 추출과 JSON 생성까지 이어질 수 있도록 전체 흐름을 고려해 작업했습니다.</p>
+          </div>
+          <div class="story-block">
+            <h3>관절 좌표를 실제 활용 가능한 신체 데이터로 변환</h3>
+            <p>MediaPipe Pose로 추출한 raw landmark 데이터를 그대로 두지 않고, 어깨 너비, 허리 너비, 상체 길이, 하체 길이와 같은 길이 값과 비율 값으로 가공했습니다.</p>
+          </div>
+          <div class="story-block">
+            <h3>비율 중심 분석 구조 설계</h3>
+            <p>촬영 거리나 자세 차이에 따라 절대 길이 값이 달라질 수 있다는 점을 고려해, 결과 해석에는 상체·하체 비율과 어깨·허리 비율 같은 상대값이 활용되도록 정리했습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="section-key">Process</div>
+      <div class="section-content">
+        <h2>처리 흐름</h2>
+        <div class="process-list">
+          <div class="process-row">
+            <div class="process-step">01 이미지 촬영</div>
+            <div class="process-text">Raspberry Pi Camera Module을 이용해 사용자 전신 이미지를 정면과 측면 기준으로 수집합니다.</div>
+          </div>
+          <div class="process-row">
+            <div class="process-step">02 좌표 추출</div>
+            <div class="process-text">OpenCV와 MediaPipe Pose를 활용해 33개 신체 관절 좌표를 추출합니다.</div>
+          </div>
+          <div class="process-row">
+            <div class="process-step">03 JSON 생성</div>
+            <div class="process-text">추출된 좌표 데이터를 front.json, side.json 구조로 저장하고 후속 처리에 활용합니다.</div>
+          </div>
+          <div class="process-row">
+            <div class="process-step">04 길이/비율 계산</div>
+            <div class="process-text">어깨, 허리, 상체, 하체 관련 길이 값을 계산하고 비율 정보를 body_result.json으로 정리합니다.</div>
+          </div>
+          <div class="process-row">
+            <div class="process-step">05 서버 활용</div>
+            <div class="process-text">Python 기반 Fast API 서버와 REST API(JSON) 방식으로 연결해 분석 결과가 시스템에서 활용될 수 있도록 구성합니다.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tech">
+      <div class="section-key">Environment</div>
+      <div class="section-content">
+        <h2>개발 환경</h2>
+        <div class="tech-list">
+          <div class="tech-row">
+            <div class="tech-name">서버 / 데이터 처리</div>
+            <div class="tech-detail">
+              Python 기반 Fast API 환경에서 체형 분석 결과를 처리하고, REST API(JSON) 방식으로 연결하도록 구성했습니다.
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Fast API</span>
+                <span class="tag">REST API (JSON)</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">MySQL Workbench</span>
+              </div>
+            </div>
+          </div>
+          <div class="tech-row">
+            <div class="tech-name">클라이언트 / 디바이스</div>
+            <div class="tech-detail">
+              촬영 장치와 프론트엔드 연결은 Raspberry Pi, Flutter Web, OpenCV, MediaPipe Pose 환경을 기준으로 구성했습니다.
+              <div class="tags">
+                <span class="tag">Flutter Web</span>
+                <span class="tag">Raspberry Pi Camera Module</span>
+                <span class="tag">Raspberry Pi</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">MediaPipe Pose</span>
+                <span class="tag">VSCode</span>
+                <span class="tag">Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="timeline">
+      <div class="section-key">Record</div>
+      <div class="section-content">
+        <h2>진행 기록</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2026</div>
+            <div class="timeline-main">
+              <h3>체형 분석 파이프라인 설계 및 구현</h3>
+              <p>라즈베리파이 촬영, MediaPipe 좌표 추출, JSON 생성, 길이 및 비율 계산, 서버 연동 구조를 역할 범위에 맞게 정리하고 구현했습니다.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">결과 데이터</div>
+            <div class="timeline-main">
+              <h3>front.json · side.json · body_result.json 생성</h3>
+              <p>분석 과정을 결과 중심으로 남길 수 있도록 파일 구조를 정리했고, 이후 추천 시스템에서 활용 가능한 형태로 연결했습니다.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">저장소</div>
+            <div class="timeline-main">
+              <h3>GitHub 프로젝트 정리</h3>
+              <p>개인 저장소와 프로젝트 저장소를 분리하여 코드, 역할, 처리 흐름이 보이도록 정리했습니다.</p>
+              <div class="links">
+                <a href="https://github.com/yj-cho03/body-analysis" target="_blank" rel="noopener noreferrer">프로젝트 저장소 ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>© 2026 조영재 Project Resume</footer>
+      </div>
+    </section>
   </main>
 </body>
 </html>
